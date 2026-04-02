@@ -1,4 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background 1s ease;
+}
+
+.container {
+    text-align: center;
+}
+
 h1 {
-    color: "black";
-    text-decorations: "underlined", "italic", "bold";
+    color: #fff;
+    margin-bottom: 30px;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.clock-container {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    max-width: 400px;
+    width: 90%;
+}
+
+.clock {
+    width: 300px;
+    height: 300px;
+    border: 8px solid #fff;
+    border-radius: 50%;
+    position: relative;
+    margin: 0 auto 20px;
+    background: rgba(0, 0, 0, 0.3);
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.8);
+}
+
+.hand {
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    background: #fff;
+    transform-origin: 50% 100%;
+    border-radius: 5px;
+    transform: translateX(-50%);
+    transition: transform 0.1s;
+}
+
+.hour {
+    width: 8px;
+    height: 80px;
+}
+
+.minute {
+    width: 6px;
+    height: 120px;
+}
+
+.second {
+    width: 2px;
+    height: 140px;
+    background: #ff4757;
+    z-index: 10;
+}
+
+.center-point {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 15px;
+    height: 15px;
+    background: #ff4757;
+    border-radius: 50%;
+    z-index: 20;
+}
+
+.time-display {
+    font-size: 2.5em;
+    color: #fff;
+    margin: 20px 0;
+    font-weight: bold;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.date-display {
+    color: #aaa;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.greeting {
+    color: #ffd33d;
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+/* Темы для разных времён суток */
+body.morning {
+    background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+}
+
+body.day {
+    background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%);
+}
+
+body.evening {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+body.night {
+    background: linear-gradient(135deg, #131313 0%, #262626 100%);
 }
