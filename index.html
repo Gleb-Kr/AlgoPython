@@ -1,16 +1,26 @@
-<html>
-    <head>
-        <title>\(c\) GLEB KR.</title>
-    </head>
-
-    <main>
-        <body>
-            <h1>TIME</h1>
-            
-        </body>
-
-        <footer style="color=#012345">
-            <h1>A bit out of place...</h1>
-        </footer>
-    </main>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAGIC CLOCK \(c\) Gleb Kr.</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="clock-container">
+            <h1>Magic clock...</h1>
+            <div class="clock">
+                <div class="hand hour" id="hour"></div>
+                <div class="hand minute" id="minute"></div>
+                <div class="hand second" id="second"></div>
+                <div class="center-point"></div>
+            </div>
+            <div class="time-display" id="time">00:00:00</div>
+            <div class="date-display" id="date">Loading...</div>
+            <div class="greeting" id="greeting">Good mourning!</div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
 </html>
